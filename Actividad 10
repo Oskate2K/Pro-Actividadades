@@ -1,0 +1,41 @@
+
+#Oscar Alfonso Rojas Valdez, 218733331, Carga y consulta de datos en Spyder, 18/02/2023
+
+
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+import pandas as pd
+
+fichero = '/Users/rvteam/Documents/Actividad10/DataSetsCar/precioscoches.csv'
+
+datos = pd.read_csv(fichero)
+
+print(datos.head(5))
+print('*'*10)
+print(datos.tail(6))
+
+print(datos.columns)
+
+titulos_cabecera = ['indice', 'nombre', 'localizacion', 'año', 'kilometros recorridos', 'combustible', 'transmision', 'tipo propietario', 'kilometraje', 'motor', 'potencia', 'asientos', 'precio']
+
+datos.columns = titulos_cabecera
+print(datos.head(5))
+print(datos.columns)
+
+#exportar datos
+fichero = '/Users/rvteam/Documents/Actividad10/DataSetsCar/precioscochesCopia.csv'
+datos.to_csv(fichero)
+
+#Otros formatos de archivos
+#datos.to_json(fichero)
+#datos.to_excel(fichero)
+#datos.to_sql(fichero)
+
+#pd.read_json(fichero)
+#pd.read_excel(fichero)
+#pd.read_sql(fichero)
