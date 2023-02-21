@@ -1,0 +1,421 @@
+#Oscar Alfonso Rojas Valdez, 218733331, Codigo en el cual aprendimos a usar las funciones basicas en python, 21/02/2023
+
+import pandas as pd
+import numpy as numpy
+Hola mundo
+print("Hola mundo")
+Hola mundo
+1
+# la funcion type nos permite ver el tipo de dato de un objeto
+type(1)
+int
+2.3
+type(2.3)
+float
+2
+1 + 2
+3
+3**2
+3**2
+9
+T
+type(True)
+bool
+llo World
+type("Hello World")
+str
+# cambiar minuscula, mayuscula, etc
+print("Hello World".upper())
+print("Hello World".lower())
+print("Hello World".title())
+​
+​
+# contar letras
+print("hello world".count('l'))
+#remplazar letras de cadenas de texto
+print("hello world".replace('o', 'u'))
+HELLO WORLD
+hello world
+Hello World
+3
+hellu wurld
+message_1 = "Estoy aprendiendo Python"
+1
+message_1
+'Estoy aprendiendo Python'
+ 
+message_2 = " Y es divertido"
+message_2
+message_2
+' Y es divertido'
+_2
+message_1 + message_2
+'Estoy aprendiendo Python Y es divertido'
+ssage
+message = f'{message_1}{message_2}'
+message
+'Estoy aprendiendo Python Y es divertido'
+countries = ['United States', 'India', 'China', 'Brazil']
+countries
+countries
+['United States', 'India', 'China', 'Brazil']
+countries[0]
+countries[0]
+'United States'
+1
+countries[1]
+'India'
+2
+countries[2]
+'China'
+3
+countries[3]
+'Brazil'
+-1
+countries[-1]
+'Brazil'
+4
+countries[-4]
+'United States'
+ries
+countries
+['United States', 'India', 'China', 'Brazil']
+:3
+countries[0:3]
+['United States', 'India', 'China']
+1:
+countries[1:]
+['India', 'China', 'Brazil']
+2:
+countries[2:]
+['China', 'Brazil']
+:2
+countries[:2]
+['United States', 'India']
+countries
+countries
+['United States', 'India', 'China', 'Brazil']
+countries.append('Canada')
+countries.append('Canada')
+countries
+countries
+['United States', 'India', 'China', 'Brazil', 'Canada']
+argentina
+countries.insert(0, 'argentina')
+u
+countries
+['argentina', 'United States', 'India', 'China', 'Brazil', 'Canada']
+countries_2 = ['UK', 'Alemania', 'Australia']
+countries + countries_2
+countries + countries_2
+['argentina',
+ 'United States',
+ 'India',
+ 'China',
+ 'Brazil',
+ 'Canada',
+ 'UK',
+ 'Alemania',
+ 'Australia']
+ountries, countries_2
+nueva_lista = [countries, countries_2]
+nueva_lista
+nueva_lista
+[['argentina', 'United States', 'India', 'China', 'Brazil', 'Canada'],
+ ['UK', 'Alemania', 'Australia']]
+C
+countries.remove('Canada')
+countries
+countries
+['argentina', 'United States', 'India', 'China', 'Brazil']
+c
+countries.pop(0)
+'argentina'
+c
+countries
+['United States', 'India', 'China', 'Brazil']
+0
+del countries[0]
+countries
+countries
+['India', 'China', 'Brazil']
+numbers = [4,3,10,7,1,2]
+numbers
+numbers
+[4, 3, 10, 7, 1, 2]
+numbers.sort()
+numbers
+numbers
+[1, 2, 3, 4, 7, 10]
+T
+numbers.sort(reverse=True)
+numbers
+numbers
+[10, 7, 4, 3, 2, 1]
+ = 1000
+numbers[0] = 1000
+numbers
+numbers
+[1000, 7, 4, 3, 2, 1]
+countries.append('argentina')
+countries
+countries
+['India', 'China', 'Brazil', 'argentina']
+a_3 = countries
+nueva_lista_3 = countries
+nueva_lista_3
+nueva_lista_3
+['India', 'China', 'Brazil', 'argentina']
+nueva_lista = countries.copy()
+nueva_lista
+nueva_lista
+['India', 'China', 'Brazil', 'argentina']
+nueva_lista_2 = countries[:]
+nueva_lista_2
+nueva_lista_2
+['India', 'China', 'Brazil', 'argentina']
+mi_diccionario = {'key1':'value1','key2':'value2'}
+6
+my_data = {'nombre':'frank','edad':26}
+my_data
+my_data
+{'nombre': 'frank', 'edad': 26}
+'
+my_data['nombre']
+'frank'
+my_data.keys()
+dict_keys(['nombre', 'edad'])
+my_data.values()
+dict_values(['frank', 26])
+my_data.items()
+dict_items([('nombre', 'frank'), ('edad', 26)])
+:26
+my_data = {'nombre':'frank', 'edad':26}
+d
+my_data['estatura'] = 1.7
+d
+my_data
+{'nombre': 'frank', 'edad': 26, 'estatura': 1.7}
+nuevo_diccionario = my_data.copy()
+nuevo_diccionario
+nuevo_diccionario
+{'nombre': 'frank', 'edad': 26, 'estatura': 1.7}
+my_data
+my_data
+{'nombre': 'frank', 'edad': 26, 'estatura': 1.7}
+español
+my_data.update({'estatura': 1.9, 'lenaguajes':['Ingles', 'español']})
+d
+my_data
+{'nombre': 'frank',
+ 'edad': 26,
+ 'estatura': 1.9,
+ 'lenaguajes': ['Ingles', 'español']}
+nuevo_diccionario = my_data.copy()
+nuevo_diccionario
+nuevo_diccionario
+{'nombre': 'frank',
+ 'edad': 26,
+ 'estatura': 1.9,
+ 'lenaguajes': ['Ingles', 'español']}
+ta
+my_data
+{'nombre': 'frank',
+ 'edad': 26,
+ 'estatura': 1.9,
+ 'lenaguajes': ['Ingles', 'español']}
+estatura
+my_data.pop('estatura')
+1.9
+my_data
+my_data
+{'nombre': 'frank', 'edad': 26, 'lenaguajes': ['Ingles', 'español']}
+my_data.clear()
+my_data
+my_data
+{}
+:
+edad = 24
+​
+if edad >=18:
+    print("eres mayor de edad")
+elif edad>=13:
+    print("eres un adolecente")
+else: 
+    print("Eres un niño")
+eres mayor de edad
+Brazil
+countries = ['United States', 'India', 'China', 'Brazil']
+:
+if "Colombia" in countries:
+    print("Pais esta en la lista")
+else:
+    print("Pais no esta en la lista")
+Pais no esta en la lista
+ou
+for pais in countries:
+    print(pais)
+United States
+India
+China
+Brazil
+:
+for pais in countries:
+    if pais == "United States":
+        print(pais)
+United States
+for numero, pais in enumerate(countries):
+    print(numero)
+    print(pais)
+0
+United States
+1
+India
+2
+China
+3
+Brazil
+my_data = {'nombre': 'frank', 'edad':26}
+my_data
+my_data
+{'nombre': 'frank', 'edad': 26}
+my_data.items()
+dict_items([('nombre', 'frank'), ('edad', 26)])
+for key, value in my_data.items():
+    print(key)
+    print(value)
+nombre
+frank
+edad
+26
+countries
+countries
+['United States', 'India', 'China', 'Brazil']
+countries
+len(countries)
+4
+max([16,83,32,1,10])
+max([16,83,32,1,10])
+83
+in
+min([16,83,32,1,10])
+1
+countries
+type(countries)
+list
+_data
+type(my_data)
+dict
+round(2.333, 2)
+2.33
+i
+for i in range(1, 10, 2):
+    print(i)
+1
+3
+5
+7
+9
+return suma_final
+def sumar_numeros(a, b):
+    suma_final = a + b
+    return suma_final
+sumar_numeros(10, 5)
+15
+import os
+import os
+os.getcwd()
+'/Users/rvteam'
+os.listdir()
+['.config',
+ 'Music',
+ '.condarc',
+ '.DS_Store',
+ 'VirtualBox VMs',
+ '.CFUserTextEncoding',
+ '.xonshrc',
+ 'Untitled.ipynb',
+ '.zshrc',
+ '.templateengine',
+ '.local',
+ 'Projects',
+ 'Pictures',
+ '.mysqlsh',
+ '.nuget',
+ '.zsh_history',
+ '.ipython',
+ 'Desktop',
+ 'Library',
+ '.matplotlib',
+ '.spyder-py3',
+ '.IdentityService',
+ '.android',
+ '.ms_openjdk_config',
+ 'Public',
+ '.tcshrc',
+ '.anaconda',
+ 'Movies',
+ '.dotnet',
+ 'Applications',
+ 'CoreBrightness-backup',
+ 'opt',
+ '.Trash',
+ '.ipynb_checkpoints',
+ '.jupyter',
+ 'Documents',
+ '.mysql_history',
+ '.mono',
+ '.bash_profile',
+ 'Downloads',
+ '.python_history',
+ '.continuum',
+ '.viminfo',
+ '.conda']
+nueva carpeta
+os.makedirs("nueva carpeta")
+os.listdir()
+['nueva carpeta',
+ '.config',
+ 'Music',
+ '.condarc',
+ '.DS_Store',
+ 'VirtualBox VMs',
+ '.CFUserTextEncoding',
+ '.xonshrc',
+ 'Untitled.ipynb',
+ '.zshrc',
+ '.templateengine',
+ '.local',
+ 'Projects',
+ 'Pictures',
+ '.mysqlsh',
+ '.nuget',
+ '.zsh_history',
+ '.ipython',
+ 'Desktop',
+ 'Library',
+ '.matplotlib',
+ '.spyder-py3',
+ '.IdentityService',
+ '.android',
+ '.ms_openjdk_config',
+ 'Public',
+ '.tcshrc',
+ '.anaconda',
+ 'Movies',
+ '.dotnet',
+ 'Applications',
+ 'CoreBrightness-backup',
+ 'opt',
+ '.Trash',
+ '.ipynb_checkpoints',
+ '.jupyter',
+ 'Documents',
+ '.mysql_history',
+ '.mono',
+ '.bash_profile',
+ 'Downloads',
+ '.python_history',
+ '.continuum',
+ '.viminfo',
+ '.conda']
