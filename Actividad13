@@ -1,1 +1,63 @@
 
+<h1>Oscar Alfonso Rojas Valdez 218733331 / 27/02/23 Actividad 13 Analítica de Datos 2023-A LTIN</h1>
+#importar pandas y las librerías
+import pandas as pd
+import numpy as np
+
+<h2>Opción 1</h2>
+
+# creando un array
+data = np.array([[1,4],[2,5],[3,6]])
+
+# creando un dataframe
+df=pd.DataFrame(data,index=['row1','row2','row3'],
+                columns=['col1','col2'])
+                
+# mostrar el dataframe
+df
+
+<h2>Opción 2</h2>
+
+# creando un array en forma de lista
+data=[[1,4],[2,5],[3,6]]
+# creando un dataframe
+df=pd.DataFrame(data,index=['row1','row2','row3'],
+                columns=['col1','col2'])
+                            
+# mostrar el dataframe
+df
+
+<h1>Creando un dataframe usando diccionarios</h1>
+
+# listas usadas para el ejemplo
+states=["Jalisco","Nuevo Leon","CDMX","Oaxaca"]
+population=[39613493,29730311,21944577,19299981]
+
+#almacenando listas en un diccionario
+dict_states={'States':states,'population':population}
+#creando el dataframe
+
+df_population=pd.DataFrame(dict_states)
+#df_population=pd.DataFrame.from_distc(dict_states)
+
+#Mostrar el dataframe
+df_population
+
+<h1>Creando un dataframe con archivos csv</h1>
+#leyendo el archivo csv
+df_exams=pd.read_csv('StudentsPerformance.csv')
+#mostrando el dataframe
+df_exams
+
+#Mostrar primeras 5 filas del dataframe
+df_exams.head()
+
+#Mostrar ultimas 5 filas del dataframe
+df_exams.tail()
+
+#accediendo al atributo shape
+df_exams.shape
+
+#mostrar "n" filas
+pd.set_option('display.max_rows',1000)
+df_exams
