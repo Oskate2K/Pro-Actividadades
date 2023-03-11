@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 11 12:40:26 2023
+
+@author: rvteam
+"""
+
+# Regresion Lineal Simple Modelo de Entrenamiento
+# OARV (Oscar Alfonso Rojas Valdez)
+# 8 De marzo del 2023
+# Analitica de datos
+# Importar las librearias numpy, matploitlib y pandas
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+# Importar el data set
+dataset = pd.read_csv('Salary_Data.csv') 
+X = dataset.iloc[:, :-1].values 
+y = dataset.iloc[:, :1].values 
+
+# Dividir el data set en conjunto de entrenamiento y conjunto testing
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
+
+# Crear modelo de regresion lineal simple con el conjunto de entramiento
+from sklearn.linear_model import LinearRegression
+regression = LinearRegression()
+regression.fit(X_train, y_train)
+
+# Predecir el conjunto de test
+y_pred = regression.predict(X_test)
+
+# Visualizar los resultados de entreamiento
+plt.scatter(X_train, y_train, color = "red")
+plt.plot(X_train, regression.predict(X_train), color = "blue")
+plt.title("Sueldo vs años de experiencia (conjunto de Entrenamiento)")
+plt.xlabel("Años de experiencia")
+plt.ylabel("Sueldo en $")
+plt.show()
+
+# Visualizar los resultados del test
+plt.scatter(X_train, y_train, color = "red")
+plt.plot(X_train, regression.predict(X_train), color = "blue")
+plt.title("Sueldo vs años de experiencia (conjunto de Testing)")
+plt.xlabel("Años de experiencia")
+plt.ylabel("Sueldo en $")
+plt.show()
